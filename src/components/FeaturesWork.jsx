@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin-top: 15.2rem;
+  margin-top: 1.2rem;
 `;
 
 const Line = styled.div`
@@ -15,12 +15,13 @@ const Line = styled.div`
 const ImagesContainer = styled.div`
   margin-top: 1.7rem;
   display: flex;
+
   flex-wrap: wrap;
   justify-content: space-around;
 `;
 
 const LeftImage = styled.img`
-  width: 300px;
+  width: 100%;
 
   height: 500px;
   /* image-rendering: pixelated; */
@@ -37,10 +38,12 @@ const LeftImage = styled.img`
 
 const RightImage = styled.div`
   display: flex;
+
   justify-content: flex-start;
   width: 100%;
   height: 450px;
   margin-top: 25px;
+  margin-right: 1rem;
   transition: all 0.3s ease-in;
 
   &:hover {
@@ -95,14 +98,10 @@ function FeaturesWork() {
           <RightImage>
             <video
               src="//videos.ctfassets.net/b62jgkkofmz2/6Jtrf2ZLxdzj4iKvU7mFcg/b69a6ff8af4f0fd176d48c37a0e69b43/Intro_Movie_for_AHL_Product_Design.mp4"
-              preload="auto"
-              loop
-              playsinline
-              webkit-playsinline
-              x5-playsinline
-              style={{ width: '100%', height: '100%' }}
+              style={{ width: '100%', height: '100% + 25px' }}
             ></video>
           </RightImage>
+
           <div
             style={{
               display: 'flex',

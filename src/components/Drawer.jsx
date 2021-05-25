@@ -47,16 +47,16 @@ function Drawer({ show }) {
   return (
     <>
       <Container className={show ? 'show' : ''}>
-        <Items data-aos="fade-down" style={{ marginTop: '55px' }}>
+        <Items style={{ marginTop: '55px' }}>
           <Item>00 About</Item>
         </Items>
-        <Items data-aos="fade-down">
+        <Items>
           <Item>01 Work</Item>
         </Items>
-        <Items data-aos="fade-down">
+        <Items>
           <Item>02 Blog</Item>
         </Items>
-        <Items data-aos="fade-down">
+        <Items>
           <Item>03 Contact</Item>
         </Items>
       </Container>

@@ -1,4 +1,5 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import PickOurBrainsCard from './PickOurBrainsCard';
 
@@ -48,16 +49,25 @@ const CardsContainer = styled.div`
 `;
 
 function PickOurBrains() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Container>
       <Head>
         <div
           className="pick__brains"
           style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
+          data-aos="fade-up"
         >
           Pick Our Brains
         </div>
-        <div className="pick__brains" style={{ fontSize: '2.1rem' }}>
+        <div
+          data-aos="fade-up"
+          className="pick__brains"
+          style={{ fontSize: '2.1rem' }}
+        >
           News, Blogs, Good Intentions etc.
         </div>
       </Head>

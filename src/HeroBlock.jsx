@@ -20,21 +20,37 @@ const Container = styled.div`
 `;
 function HeroBlock() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', headerColorChange);
+    console.log(document.body.querySelectorAll('.bottom'));
+    return function cleanup() {
+      window.removeEventListener('scroll', headerColorChange);
+    };
+  });
+
+  const headerColorChange = () => {
+    const windowsScrollTop = window.pageYOffset;
+    if (windowsScrollTop > 290) {
+      document.body.querySelectorAll('.first')[0].classList.remove('top');
+      document.body.querySelectorAll('.second')[0].classList.remove('bottom');
+      document.body.querySelectorAll('.third')[0].classList.remove('bottom');
+    } else if (windowsScrollTop < 210) {
+      document.body.querySelectorAll('.first')[0].classList.add('top');
+      document.body.querySelectorAll('.second')[0].classList.add('bottom');
+      document.body.querySelectorAll('.third')[0].classList.add('bottom');
+    }
+  };
+
   return (
     <Hero>
       <Container>
         <div>
-          <div className="first" data-aos="fade-up">
-            Great Ideas
-          </div>
-          <div className="second bottom" data-aos="fade-up">
-            Deserve Great
-          </div>
-          <div className="third bottom" data-aos="fade-up">
-            Products
-          </div>
+          <div className="first top">Great Ideas</div>
+          <div className="second bottom">Deserve Great</div>
+          <div className="third bottom">Products</div>
         </div>
       </Container>
     </Hero>

@@ -1,8 +1,4 @@
-.first {
-  color: white;
-  font-size: 2.3rem;
-  font-weight: bold;
-  transition: all 0.3s ease-in;
+.top {
 }
 
 /* .bottom {
@@ -13,7 +9,12 @@
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(90px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   100% {
@@ -26,6 +27,11 @@
   0% {
     opacity: 0;
     transform: translateY(95px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(30px);
   }
 
   100% {
@@ -42,11 +48,13 @@
   animation-duration: 1.5s;
 }
 
-.first {
-  font-size: 2.9rem;
+.top {
+  color: white;
+  font-size: 2.3rem;
+  transition: all 0.3s ease-in;
   font-weight: bold;
   animation-name: moveInTop;
-  animation-duration: 0.5s;
+  animation-duration: 0.9s;
 }
 
 .heading__text {

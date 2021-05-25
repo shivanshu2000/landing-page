@@ -5,7 +5,7 @@ import FeaturesWork from './FeaturesWork';
 import PickOurBrains from './PickOurBrains';
 
 const Container = styled.div`
-  margin-top: -30px;
+  margin-top: 30px;
   border-radius: 25px;
   background-color: white;
   /* width: 100; */
