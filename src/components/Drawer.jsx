@@ -55,17 +55,17 @@ function Drawer({ show }) {
   return (
     <>
       <Container className={show ? 'show' : ''}>
-        <Items style={{ marginTop: '55px' }}>
-          <Item className="drawer_items">00 About</Item>
+        <Items className="drawer_items" style={{ marginTop: '55px' }}>
+          <Item>00 About</Item>
         </Items>
-        <Items>
-          <Item className="drawer_items">01 Work</Item>
+        <Items className="drawer_items">
+          <Item>01 Work</Item>
         </Items>
-        <Items>
-          <Item className="drawer_items">02 Blog</Item>
+        <Items className="drawer_items">
+          <Item>02 Blog</Item>
         </Items>
-        <Items>
-          <Item className="drawer_items">03 Contact</Item>
+        <Items className="drawer_items">
+          <Item>03 Contact</Item>
         </Items>
       </Container>
     </>

@@ -22,11 +22,17 @@ const Line = styled.div`
 `;
 
 const ImagesContainer = styled.div`
-  margin-top: 1.7rem;
+  margin-top: 3.5rem;
   display: flex;
-
-  flex-wrap: wrap;
   justify-content: space-around;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const LeftImage = styled.img`
@@ -45,28 +51,36 @@ const LeftImage = styled.img`
   }
 `;
 
-const RightImage = styled.div`
-  display: flex;
-
-  justify-content: flex-start;
-  width: 100%;
-  height: 450px;
-  margin-top: 25px;
-  margin-right: 1rem;
-  transition: all 0.3s ease-in;
-
-  &:hover {
-    transform: scale(0.98);
-  }
-`;
-
 const RightImageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 40%;
-  height: 450px;
-  @media screen and (max-width: 506px) {
+  margin-top: 4.5rem;
+  height: auto;
+  @media screen and (max-width: 950px) {
     width: 80%;
+    margin-left: 3.5rem;
+  }
+  @media screen and (max-width: 550px) {
+    width: 80%;
+    margin: 2.5rem auto;
+  }
+`;
+const LeftImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+
+  height: auto;
+  @media screen and (max-width: 950px) {
+    width: 50%;
+    margin-left: 3.5rem;
+  }
+  @media screen and (max-width: 550px) {
+    width: 80%;
+    margin: 2.5rem auto;
   }
 `;
 
@@ -85,49 +99,42 @@ function FeaturesWork() {
       </div>
 
       <ImagesContainer>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <LeftImageContainer
+          style={{ display: 'flex', flexDirection: 'column' }}
+        >
           <LeftImage />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginTop: '9px',
-              }}
-            >
-              <img
-                style={{ height: '65px' }}
-                alt="image__image"
-                src="//images.ctfassets.net/b62jgkkofmz2/53QqxmKvGdR14P2C8z3q2X/805effeb1876ec61214663bd80684fde/logo-with-text.svg"
-              />
-            </div>
-            <div style={{ fontSize: '20px' }}>
-              Building India's first ever rental car<div> marketplace.</div>
-            </div>
-          </div>
-        </div>
-
-        <RightImageContainer>
-          <RightImage>
-            <video
-              src="//videos.ctfassets.net/b62jgkkofmz2/6Jtrf2ZLxdzj4iKvU7mFcg/b69a6ff8af4f0fd176d48c37a0e69b43/Intro_Movie_for_AHL_Product_Design.mp4"
-              style={{ width: '100%', height: '100% ' }}
-            ></video>
-          </RightImage>
-
           <div
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-start',
-              marginTop: '25px',
-            }}
+            style={{ fontSize: '16px', color: '#60637B', marginTop: '1.5rem' }}
           >
             <img
+              style={{ height: '65px' }}
+              alt="image__image"
+              src="//images.ctfassets.net/b62jgkkofmz2/53QqxmKvGdR14P2C8z3q2X/805effeb1876ec61214663bd80684fde/logo-with-text.svg"
+            />
+            <div style={{ marginTop: '1rem', marginLeft: '11px' }}>
+              Building India's first ever rental car <div>marketplace.</div>
+            </div>
+          </div>
+        </LeftImageContainer>
+
+        <RightImageContainer>
+          <video
+            src="//videos.ctfassets.net/b62jgkkofmz2/6Jtrf2ZLxdzj4iKvU7mFcg/b69a6ff8af4f0fd176d48c37a0e69b43/Intro_Movie_for_AHL_Product_Design.mp4"
+            style={{ width: '100%' }}
+          ></video>
+
+          <div style={{ fontSize: '16px', marginTop: '1.5rem' }}>
+            <img
+              width="100"
               alt="video"
               src="//images.ctfassets.net/b62jgkkofmz2/4taqxDkC14IjVNKhbVkYE8/aa3814a58b3a976dd293b4b581b08a6c/black.svg"
             />
           </div>
-          <p>A decade old news channel's makeover</p>
+          <div
+            style={{ marginTop: '1rem', marginLeft: '11px', color: '#60637B' }}
+          >
+            A decade old news channel's makeover
+          </div>
         </RightImageContainer>
       </ImagesContainer>
     </Container>

@@ -28,7 +28,7 @@ const data = [
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 7rem;
+  margin-top: 4.5rem;
 
   background-color: #f7f8fb;
 `;
