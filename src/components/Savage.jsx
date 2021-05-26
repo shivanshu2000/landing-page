@@ -6,6 +6,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 9rem;
+  padding-bottom: 5rem;
+  /* margin-bottom: 9rem; */
+  @media screen and (max-width: 500px) {
+    margin-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  @media screen and (max-width: 300px) {
+    margin-top: 3rem;
+    padding-bottom: 0rem;
+  }
 `;
 
 const Content = styled.div`
@@ -14,12 +24,18 @@ const Content = styled.div`
   padding-left: 7.5rem;
   margin-top: 1.5rem;
   font-size: 1.6rem;
+  @media screen and (max-width: 620px) {
+    padding-left: 1rem;
+  }
 `;
 
 const MoreAnimation = styled.div`
   padding-left: 7.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  @media screen and (max-width: 620px) {
+    padding-left: 1rem;
+  }
 `;
 
 export const EffectElement = styled.div`

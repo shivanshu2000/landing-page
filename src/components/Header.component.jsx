@@ -38,13 +38,23 @@ const Nav = styled.nav`
   &.shift {
     margin-top: 0;
   }
+
+  @media screen and (max-width: 320px) {
+    justify-content: space-around;
+  }
 `;
 
 const Container = styled.header`
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 30;
   margin-bottom: 95px;
+  @media screen and (max-width: 320) {
+    width: 300px;
+  }
 `;
 
 const HiddenBlock = styled.div`
@@ -138,7 +148,7 @@ export default function Header() {
   return (
     <Container>
       <HiddenBlock className="hidden__block"></HiddenBlock>
-      <Nav>
+      <Nav className="nav">
         <Logo />
         <RightItems>
           <HelloBox>
@@ -150,7 +160,11 @@ export default function Header() {
             <p className="menu__text">Menu</p>
             <div
               onClick={toggleMenu}
-              style={{ display: 'flex', alignItems: 'center' }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                cursor: 'pointer',
+              }}
             >
               {toggle ? (
                 <svg

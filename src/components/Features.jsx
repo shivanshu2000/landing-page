@@ -13,6 +13,7 @@ const Container = styled.div`
   height: auto;
   @media screen and (max-width: 325px) {
     padding: 2px;
+    margin-top: -65px;
   }
 `;
 function Features() {

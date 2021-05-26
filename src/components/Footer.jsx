@@ -17,6 +17,10 @@ const LeftItems = styled.div`
   flex-direction: column;
   width: '30%';
   margin-left: 2.5rem;
+
+  @media screen and (max-width: 320px) {
+    margin-left: 1rem;
+  }
 `;
 
 const RightItems = styled.div`
@@ -26,6 +30,15 @@ const RightItems = styled.div`
   align-items: center;
   margin-top: 1.5rem;
   margin-right: 2.5rem;
+
+  @media screen and (max-width: 500px) {
+    align-items: flex-start;
+    margin-top: 3.5rem;
+    margin-left: 2.5rem;
+  }
+  @media screen and (max-width: 320px) {
+    margin-left: 1rem;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -71,11 +84,11 @@ function Footer() {
             <path
               d="M28 3h-6.818C14.906 3 9.818 8.149 9.818 14.5v6.9H3v9.2h6.818V49h9.091V30.6h6.818L28 21.4h-9.09v-6.9c0-1.27 1.017-2.3 2.272-2.3H28V3z"
               stroke="hsla(234, 13%, 33%, 1)"
-              stroke-width="5.6"
+              strokeWidth="5.6"
               fill="none"
-              fill-rule="evenodd"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              fillRule="evenodd"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </svg>
           <svg
@@ -86,11 +99,11 @@ function Footer() {
             <path
               d="M40.1 18.79c8.781 0 15.9 7.069 15.9 15.789V53H45.4V34.579c0-2.907-2.373-5.263-5.3-5.263-2.927 0-5.3 2.356-5.3 5.263V53H24.2V34.579c0-8.72 7.119-15.79 15.9-15.79zM3 21.42h10.6V53H3V21.421zm5.3-7.895c-2.927 0-5.3-2.356-5.3-5.263S5.373 3 8.3 3c2.927 0 5.3 2.356 5.3 5.263s-2.373 5.263-5.3 5.263z"
               stroke="hsla(234, 13%, 33%, 1)"
-              stroke-width="5.264"
+              strokeWidth="5.264"
               fill="none"
-              fill-rule="evenodd"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              fillRule="evenodd"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </svg>
           <svg

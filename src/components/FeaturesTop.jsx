@@ -18,7 +18,7 @@ function FeaturesTop() {
     <Container>
       <FeaturesTopSvg />
 
-      <div>
+      <div style={{ paddingLeft: '5px', marginRight: '11px' }}>
         <p className="heading__text">Strategic UX</p>
         <p className="heading__text" style={{ marginTop: '-55px' }}>
           Design & Brand
@@ -26,14 +26,14 @@ function FeaturesTop() {
         <p className="heading__text" style={{ marginTop: '-55px' }}>
           Studio.
         </p>
-        <p
+        <div
           className="content"
           style={{ fontSize: '1.5rem', marginTop: '-35px' }}
         >
-          We help entrepreneurs and businesses{' '}
-          <p> achieve ambitious dreams by building design</p> centric products
-          and brands.
-        </p>
+          We help entrepreneurs and businesses achieve{' '}
+          <div> ambitious dreams by building design centric</div> products and
+          brands.
+        </div>
       </div>
     </Container>
   );

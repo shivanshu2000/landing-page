@@ -3,6 +3,13 @@
   transition: all 0.3s ease-in;
 } */
 
+.App {
+  min-width: 320px;
+  @media screen and (max-width: 320px) {
+    width: 320px;
+  }
+}
+
 @keyframes moveInTop {
   0% {
     opacity: 0;
@@ -36,6 +43,39 @@
     transform: translateY(0px);
   }
 }
+/* 
+@keyframes moveInTopBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+} */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-350px);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
 
 .bottom {
   color: #b3b4b7;
@@ -52,6 +92,7 @@
   font-weight: bold;
   animation-name: moveInTop;
   animation-duration: 0.9s;
+  margin-top: 15px;
 }
 
 .heading__text {
@@ -67,6 +108,12 @@
 .pick__brains {
   animation-name: moveInTop;
   animation-duration: 0.5s;
+}
+
+.drawer__items {
+  animation-name: moveInBottom;
+  animation-duration: 2s;
+  /* animation-delay: 6.5; */
 }
 
 .red {
@@ -98,4 +145,13 @@
   transition: all 0.3s ease-in;
 
   border-radius: 9999px;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__text {
+    display: none;
+  }
+  .nav {
+    padding-top: 20px;
+  }
 }

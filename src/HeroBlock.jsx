@@ -3,20 +3,17 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Hero = styled.div`
-  /* margin-top: 95px; */
   position: relative;
   top: 95px;
   transition: all 0.3s ease-in;
   height: 450px;
   z-index: -20;
-  /* background-color: white; */
 `;
 
 const Container = styled.div`
   position: absolute;
   bottom: 50%;
   margin-left: 50px;
-  /* transform: translate(0, -50%); */
 `;
 function HeroBlock() {
   useEffect(() => {
@@ -25,7 +22,6 @@ function HeroBlock() {
 
   useEffect(() => {
     window.addEventListener('scroll', headerColorChange);
-    console.log(document.body.querySelectorAll('.bottom'));
     return function cleanup() {
       window.removeEventListener('scroll', headerColorChange);
     };

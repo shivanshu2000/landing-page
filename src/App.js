@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <HeroBlock />
-      <div>
+      <div style={{ width: '100%' }}>
         <Features />
       </div>
       <Footer />

@@ -3,6 +3,15 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   margin-top: 19.2rem;
+  @media screen and (max-width: 900px) {
+    margin-top: 15.2rem;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 11.2rem;
+  }
+  @media screen and (max-width: 400px) {
+    margin-top: 5.2rem;
+  }
 `;
 
 const Line = styled.div`
@@ -50,6 +59,17 @@ const RightImage = styled.div`
     transform: scale(0.98);
   }
 `;
+
+const RightImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 450px;
+  @media screen and (max-width: 506px) {
+    width: 80%;
+  }
+`;
+
 function FeaturesWork() {
   return (
     <Container>
@@ -81,20 +101,13 @@ function FeaturesWork() {
                 src="//images.ctfassets.net/b62jgkkofmz2/53QqxmKvGdR14P2C8z3q2X/805effeb1876ec61214663bd80684fde/logo-with-text.svg"
               />
             </div>
-            <p style={{ fontSize: '20px' }}>
-              Building India's first ever rental car<p> marketplace.</p>
-            </p>
+            <div style={{ fontSize: '20px' }}>
+              Building India's first ever rental car<div> marketplace.</div>
+            </div>
           </div>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '40%',
-            height: '450px',
-          }}
-        >
+        <RightImageContainer>
           <RightImage>
             <video
               src="//videos.ctfassets.net/b62jgkkofmz2/6Jtrf2ZLxdzj4iKvU7mFcg/b69a6ff8af4f0fd176d48c37a0e69b43/Intro_Movie_for_AHL_Product_Design.mp4"
@@ -115,7 +128,7 @@ function FeaturesWork() {
             />
           </div>
           <p>A decade old news channel's makeover</p>
-        </div>
+        </RightImageContainer>
       </ImagesContainer>
     </Container>
   );
