@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin-top: 1.2rem;
+  margin-top: 19.2rem;
 `;
 
 const Line = styled.div`
@@ -98,7 +98,7 @@ function FeaturesWork() {
           <RightImage>
             <video
               src="//videos.ctfassets.net/b62jgkkofmz2/6Jtrf2ZLxdzj4iKvU7mFcg/b69a6ff8af4f0fd176d48c37a0e69b43/Intro_Movie_for_AHL_Product_Design.mp4"
-              style={{ width: '100%', height: '100% + 25px' }}
+              style={{ width: '100%', height: '100% ' }}
             ></video>
           </RightImage>
 

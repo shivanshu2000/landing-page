@@ -63,13 +63,28 @@ const HiddenBlock = styled.div`
 
 const HelloBox = styled.div`
   padding: 3px 13px;
-  background-color: white;
+  display: flex;
+  position: relative;
+  background-color: #e4e5e9;
   color: rgb(96, 99, 123);
   border-radius: 5px;
   z-index: 10;
   margin-right: 15px;
   width: 90px;
+  cursor: pointer;
   text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  &:hover > div.red {
+    transform: scale(1);
+    transform: translate3d(10%, 15%, 0px);
+    opacity: 0.5;
+  }
+  &:hover > div.blue {
+    transform: scale(1);
+    transform: translate3d(-25%, -25%, 0px);
+    opacity: 0.4;
+  }
   @media screen and (max-width: 650px) {
     display: none;
   }
@@ -126,7 +141,11 @@ export default function Header() {
       <Nav>
         <Logo />
         <RightItems>
-          <HelloBox>Say Hello</HelloBox>
+          <HelloBox>
+            <div className="red"></div>
+            <div>Say Hello</div>
+            <div className="blue"></div>
+          </HelloBox>
           <Menu>
             <p className="menu__text">Menu</p>
             <div
